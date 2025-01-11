@@ -18,7 +18,9 @@ public class elemental2 {
             if (index == maxDigit) {
                 maxDigit += 10;
                 int[] temp = new int[maxDigit];
-                System.arraycopy(digits, 0, temp, 0, index);
+                for (int i = 0; i < index; i++) {
+                    temp[i] = digits[i];
+                }                
                 digits = temp;
             }
             digits[index] = number % 10;

@@ -16,19 +16,10 @@ public class salary {
 
         // Loop to take input from the user
         for (int i = 0; i < 10; i++) {
-            boolean isValidInput = false;
-            while (!isValidInput) {
-                try {
-                    System.out.print("Enter salary for employee " + (i + 1) + ": ");
+                    System.out.print("Enter salary for employee " +  ": ");
                     employeeData[i][0] = scanner.nextDouble();
-                    System.out.print("Enter years of service for employee " + (i + 1) + ": ");
-                    employeeData[i][1] = scanner.nextDouble();
-                    isValidInput = true;
-                } catch (Exception e) {
-                    System.out.println("Invalid input. Please enter a valid number.");
-                    scanner.next(); // Clear invalid input
-                }
-            }
+                    System.out.print("Enter years of service for employee " +  ": ");
+                    employeeData[i][1] = scanner.nextDouble();               
         }
 
         // Loop to calculate the bonus of 10 employees based on their years of service
