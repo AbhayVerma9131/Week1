@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class uppercase {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -12,16 +13,14 @@ public class uppercase {
     }
 
     public static String toUppercase(String text) {
-        StringBuilder uppercaseText = new StringBuilder();
-        for (int i = 0; i < text.length(); i++) {
-            char c = text.charAt(i);
+        char[] chars = text.toCharArray();
+        for (int i = 0; i < chars.length; i++) {
+            char c = chars[i];
             if (c >= 'a' && c <= 'z') {
-                uppercaseText.append((char) (c - 32));
-            } else {
-                uppercaseText.append(c);
+                chars[i] = (char) (c - 32);
             }
         }
-        return uppercaseText.toString();
+        return new String(chars);
     }
 
     public static boolean compareStrings(String str1, String str2) {
@@ -35,4 +34,4 @@ public class uppercase {
         }
         return true;
     }
-} 
+}

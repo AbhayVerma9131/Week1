@@ -16,16 +16,13 @@ public class lowercase {
     }
 
     public static String toLowerCase(String text) {
-        StringBuilder lowerCaseText = new StringBuilder();
-        for (int i = 0; i < text.length(); i++) {
-            char c = text.charAt(i);
-            if (c >= 'A' && c <= 'Z') {
-                lowerCaseText.append((char) (c + 32));
-            } else {
-                lowerCaseText.append(c);
+        char[] chars = text.toCharArray();
+        for (int i = 0; i < chars.length; i++) {
+            if (chars[i] >= 'A' && chars[i] <= 'Z') {
+                chars[i] = (char) (chars[i] + 32);
             }
         }
-        return lowerCaseText.toString();
+        return new String(chars);
     }
 
     public static boolean compareStrings(String str1, String str2) {
